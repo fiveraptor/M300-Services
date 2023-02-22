@@ -24,3 +24,5 @@ Um nun auch auf den Webserver zugreifen zu können muss ein Port vom lokalen PC 
 config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
 ```
 Dies bedeutet, dass der lokale Port "8080" weitergeleitet wird auf Port "80" in der VM.
+
+
