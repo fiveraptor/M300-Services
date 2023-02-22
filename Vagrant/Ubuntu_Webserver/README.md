@@ -3,7 +3,7 @@ Hier wird ein Ubuntu Server aufgesetzt und auch Apache (Webserver) automatisiert
 
 ## Automatisiert den Apache Webserver installieren lassen
 Um den Webserver automatisiert installieren zu lassen, kann im "Vagrantfile" Bash Befehle oder auch Skripte hinterlegt werden. Hier in diesem Fall werden folgende zwei Befehle ausgeführt.
-```json
+```
 config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get -y install apache2 
@@ -14,13 +14,13 @@ SHELL
 Um einen lokalen Ordner mit der Virtuellen Maschine zu teilen, muss im "Vagrantfile" angaben dazu gemacht werden.
 
 Mit folgendem können die beiden Ordner angegeben werden.
-```json
+```
 config.vm.synced_folder "html/", "/var/www/html"
 ```
 
 ## Web Zugriff vom lokalen PC auf die VM
 Um nun auch auf den Webserver zugreifen zu können muss ein Port vom lokalen PC auf die VM weitergeleitet werden. Dies muss man auch im "Vagrantfile" angeben.
-```json
+```
 config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
 ```
 Dies bedeutet, dass der lokale Port "8080" weitergeleitet wird auf Port "80" in der VM.
