@@ -38,6 +38,8 @@ Vagrant.configure("2") do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
+  config.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
+
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -63,8 +65,25 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+    # Packages vom lokalen Server holen
+    # sudo sed -i -e"1i deb {{config.server}}/apt-mirror/mirror/archive.ubuntu.com/ubuntu xenial main restricted" /etc/apt/sources.list 
+    # Debug ON!!!
+    set -o xtrace  
+    sudo apt-get update
+    sudo apt-get -y install apache2 webalizer 
+    sudo /etc/cron.daily/webalizer
+    # Testdaten erzeugen
+    curl http://localhost/ >/dev/null 2>&1
+    curl http://localhost/ >/dev/null 2>&1
+    curl http://localhost/ >/dev/null 2>&1
+    curl http://localhost/ >/dev/null 2>&1
+    curl http://localhost/bad >/dev/null 2>&1
+    # Patch falsches Output Verzeichnis von webalizer 
+    sudo sed -i -e"s:/var/www/webalizer:/var/www/html/webalizer:" /etc/webalizer/webalizer.conf 
+    sudo mkdir -p /var/www/html/webalizer 
+    # Logfiles von Apache rotieren und neue Analyse
+    sudo logrotate -f /etc/logrotate.d/apache2
+    sudo /etc/cron.daily/webalizer 
+  SHELL
 end
