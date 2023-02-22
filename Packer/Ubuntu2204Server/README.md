@@ -1,0 +1,1 @@
+Ubuntu 22.04 Server Edition mit vorinstalliertem Apach2 Server
