@@ -1,0 +1,2 @@
+# Ubuntu Server mit Apache2 als Webserver
+Hier wird ein Ubuntu Server aufgesetzt und auch Apache (Webserver) automatisiert installiert. Dazu wird auch noch das "/var/www/html" Verzeichnis von der VM mit dem "html" Verzeichnis lokal synchronisiert. Somit kann man die Websitedaten/Code lokal gespeicheret haben und auch bearbeiten. Der Vorteil an dem ist, dass ich dann die VM so viel ich will zerstören und wieder neu aufbauen kann, wobei die Websitedaten/Code bleiben und nicht gelöscht oder neu erstellt werden müssen.
