@@ -1,7 +1,7 @@
 $aws_options = {}
 # Access und Secret Key vom User vagrant-user
-$aws_options[:access_key] = "AKIAZ4D7UB3JVYN5EUHD"
-$aws_options[:secret_key] = "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"
+$aws_options[:access_key] = ""
+$aws_options[:secret_key] = ""
 # Der Name des erstellten Key Pairs
 $aws_options[:ec2_keypair] = "vagrant.pem"
 # Region Frankfurt 
