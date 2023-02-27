@@ -14,9 +14,9 @@
         web.vm.box = "dummy"
         web.vm.provider "aws" do |aws, override|
         override.ssh.username = "ubuntu"
-        override.ssh.private_key_path = "#{File.dirname(__FILE__)}/vagrant.pem"
-        aws.access_key_id = $aws_options[:access_key]
-        aws.secret_access_key = $aws_options[:secret_key]
+        override.ssh.private_key_path = "vagrant.pem"
+        aws.access_key_id = ""
+        aws.secret_access_key = ""
         aws.keypair_name = $aws_options[:ec2_keypair]
         aws.region = $aws_options[:region]
         aws.ami = $aws_options[:ami_id]
