@@ -36,7 +36,7 @@
                 "iso/ubuntu-22.04.2-live-server-amd64.iso",
                 "https://releases.ubuntu.com/22.04/ubuntu-22.04.2-live-server-amd64.iso"
             ],
-            "iso_checksum": "sha256:a5b0ea5918f850124f3d72ef4b85bda82f0fcd02ec721be19c1a6952791c8ee8",
+            "iso_checksum": "sha256:5e38b55d57d94ff029719342357325ed3bda38fa80054f9330dc789cd2d43931",
             "ssh_username": "vagrant",
             "ssh_password": "vagrant",
             "ssh_port": 22,
