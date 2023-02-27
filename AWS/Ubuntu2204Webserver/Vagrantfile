@@ -1,0 +1,18 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "dummy"
+  
+    config.vm.provider :aws do |aws, override|
+      aws.access_key_id = "AKIAZ4D7UB3J7UP2ATQY"
+      aws.secret_access_key = "FfrGAdEBJAa1vimQMNtj/b0A4K7K77dlhl6ReCQY"
+      #aws.session_token = "SESSION TOKEN"
+      aws.keypair_name = "vagrant"
+      aws.region = "eu-central-1"
+      aws.ami = "ami-0d1ddd83282187d18"
+      aws.instance_type = "t2.micro"
+      aws.security_groups = "vagrant"
+      override.ssh.username = "ubuntu"
+      override.ssh.private_key_path = "vagrant.pem"
+    end
+    config.vm.synced_folder "html/", "/var/www/html"
+    config.vm.provision "shell", path: "scripts/apache.sh"
+  end
