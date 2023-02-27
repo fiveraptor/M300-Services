@@ -33,8 +33,8 @@
             "headless": false,
             "http_directory": "http",
             "iso_urls": [
-                "iso/ubuntu-22.04.1-live-server-amd64.iso",
-                "https://releases.ubuntu.com/22.04/ubuntu-22.04.1-live-server-amd64.iso"
+                "iso/ubuntu-22.04.2-live-server-amd64.iso",
+                "https://releases.ubuntu.com/22.04/ubuntu-22.04.2-live-server-amd64.iso"
             ],
             "iso_checksum": "sha256:a5b0ea5918f850124f3d72ef4b85bda82f0fcd02ec721be19c1a6952791c8ee8",
             "ssh_username": "vagrant",
