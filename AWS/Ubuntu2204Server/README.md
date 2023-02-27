@@ -1,0 +1,1 @@
+# Vagrant mit der AWS Amazon Cloud
