@@ -7,9 +7,6 @@ $ vagrant plugin install vagrant-aws
 $ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
 ```
 
-
-
-
 ## AWS vorbereiten
 1. Die Webseite [AWS Amazon](https://aws.amazon.com/de/) öffnen und ein Amazon Stammbenutzer erstellen falls noch nicht vorhanden.
    
