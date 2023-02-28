@@ -1,5 +1,14 @@
 # Vagrant mit der AWS Amazon Cloud
-Vagrant kann auch mit verschiedenen Cloud Providern verbunden werden. Zum Beispiel mit der AWS von Amazon.
+Vagrant kann auch mit verschiedenen Cloud Providern verbunden werden. Zum Beispiel mit der AWS von Amazon. Um AWS mit Vagrant nutzen zu können muss noch das "vagrant-aws" Plugin installiert werden. Und die "dummy" Box lokal hinzugefügt werden.
+```bash
+$ vagrant plugin install vagrant-aws
+```
+```bash
+$ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+```
+
+
+
 
 ## AWS vorbereiten
 1. Die Webseite [AWS Amazon](https://aws.amazon.com/de/) öffnen und ein Amazon Stammbenutzer erstellen falls noch nicht vorhanden.
