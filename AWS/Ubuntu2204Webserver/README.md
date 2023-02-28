@@ -47,6 +47,8 @@ Der Instanz Typ, in diesem fall "t2-micro" ist der Typ der VM. Da gibt es versch
 
 Das "apache.sh" Script installiert hier auch noch den Webserver auf der VM. So können wir dann kontrollieren ob alles funktioniert wenn wir auf die Webseite (Öffentliche IP Der VM, sieht man in der AWS Konsole) der VM aufrufen können.
 
+Auch wird der lokale "html" Ordner auf die VM hochgeladen. So können wir eine Website von lokal auf den Server laden.
+
 ```ruby
 Vagrant.configure("2") do |config|
     config.vm.box = "dummy"
