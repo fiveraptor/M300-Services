@@ -1,0 +1,1 @@
+Der restliche Inhalt von diesem Ordner, also die restlichen Minecraft Server Dateien habe ich bewusst ausgeschlossen von Github

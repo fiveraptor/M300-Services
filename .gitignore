@@ -8,3 +8,4 @@ Vagrant/MinecraftServer/MCServer/*
 !/Vagrant/MinecraftServer/MCServer/run.sh
 !/Vagrant/MinecraftServer/MCServer/start-server.sh
 !/Vagrant/MinecraftServer/MCServer/paper-1.19-81.jar
+!/Vagrant/MinecraftServer/MCServer/README.md
