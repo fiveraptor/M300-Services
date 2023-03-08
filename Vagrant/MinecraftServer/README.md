@@ -36,4 +36,5 @@ Das ```mcserver_setup-sh``` startet eigentlich nur den Minecraft Server zum absc
 Um den Minecraft Server zu starten nutze ich die Software ```Screen```. Damit wird der Minecraft Server im Hintergrund im einem Terminal gestartet und ich kann jederzeit in dieses Terminal reingeehen und auch wieder rausgehen.
 
 Die ```start-server.sh``` Datei führt die ```run.sh``` in genau so einem ```Screen Terminal``` aus.
+
 Die ```run.sh``` startet dann den eigentlichen Minecraft Server.
