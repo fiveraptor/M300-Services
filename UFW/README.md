@@ -16,7 +16,10 @@ UFW heisst Uncomplicated Firewall und ist eine benutzerfreundliche Firewall-Soft
 | `sudo ufw deny from <IP Address>` | Blockiert den Zugriff auf das System von einer bestimmten IP-Adresse aus. |
 
 
+
+```
 sudo apt install ufw -y
 sudo ufw allow 80/tcp
 sudo ufw allow from 10.0.2.2 to any port 22
 ufw --force enable
+```
