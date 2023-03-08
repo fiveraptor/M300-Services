@@ -3,3 +3,6 @@
 *.vagrant
 *.pem
 *.log
+
+Vagrant/MinecraftServer/MCServer/*
+!/Vagrant/MinecraftServer/MCServer/run.sh
