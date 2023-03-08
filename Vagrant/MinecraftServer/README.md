@@ -30,7 +30,7 @@ Ich nutze zwei Provisioning Script. Diese liegen in dem Ordner ```Scripts```
 Das ```init.sh``` Script updated den Server erstmals und konfiguriert die Firewall.
 Danach alle wird noch die benötigte Software installiert.
 ### Das mcserver_setup.sh Script
-Das ```mcserver_setup-sh``` startet eigentlich nur den Minecraft Server zum abschluss. (Beim ersten start muss jedoch noch die ```EULA.txt``` im Server Verzeichnis akzeptiert werden. Danach muss der Minecraft Server erneut manuell gestartet werden.)
+Das ```mcserver_setup.sh``` startet eigentlich nur den Minecraft Server zum abschluss. (Beim ersten start muss jedoch noch die ```EULA.txt``` im Server Verzeichnis akzeptiert werden. Danach muss der Minecraft Server erneut manuell gestartet werden.)
 
 ## Minecraft Server Startdateien
 Um den Minecraft Server zu starten nutze ich die Software ```Screen```. Damit wird der Minecraft Server im Hintergrund im einem Terminal gestartet und ich kann jederzeit in dieses Terminal reingeehen und auch wieder rausgehen.
