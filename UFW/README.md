@@ -38,3 +38,7 @@ Fügt eine Firewall Regel hinzu, die den Traffic über Port 22 (SSH) auf den Ser
 ```bash
 sudo ufw allow from 10.0.2.2 to any port 22
 ```
+Aktiviert zum Schluss die Firewall. das force braucht es, weill man normalerweise diese aktion noch zusätzlich bestätigen muss. mit force wird dies umgangen.
+```bash
+sudo ufw --force enable
+```
