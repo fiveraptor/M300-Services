@@ -1,0 +1,17 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/xenial64"
+    config.vm.network "forwarded_port", guest:443, host:443, auto_correct: true
+    config.vm.network "forwarded_port", guest:80, host:80, auto_correct: true
+    config.vm.hostname = "WebServer"
+    config.vm.synced_folder "config/", "/etc/apache2/sites-available/"
+    config.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      sudo apt-get install -y apache2
+      sudo a2ensite 001-ssl.conf
+      sudo a2enmod ssl
+      sudo a2dissite 000-default.conf
+      sudo a2dissite default-ssl.conf
+      sudo htpasswd -b -c /etc/apache2/.htpasswd vagrant Passwort
+      sudo service apache2 restart
+    SHELL
+  end
