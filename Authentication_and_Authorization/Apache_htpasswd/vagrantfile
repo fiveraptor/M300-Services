@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
       sudo a2enmod ssl
       sudo a2dissite 000-default.conf
       sudo a2dissite default-ssl.conf
-      sudo htpasswd -b -c /etc/apache2/.htpasswd vagrant vagrant
+      sudo htpasswd -b -c /etc/apache2/.htpasswd user password
       sudo service apache2 restart
     SHELL
   end
