@@ -1,0 +1,14 @@
+# Define the LDAP base domain
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+replace: olcSuffix
+olcSuffix: dc=my-domain,dc=com
+
+# Define the LDAP admin user
+dn: cn=admin,dc=my-domain,dc=com
+changetype: add
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: {CLEARTEXT}password
+description: LDAP administrator
