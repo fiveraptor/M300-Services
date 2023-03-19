@@ -37,6 +37,22 @@ file='/etc/apache2/apache2.conf'
 sed -i "s/$match/$match\n$insert/" $file
 ```
 
+Für die Apache Konfiguration muss noch die `Site Config` bearbeitet bzw. eine neue erstellt werden. Hier wird definiert, unter welcher Domain (bzw. hier unter .../master) der Webserver erreichbar ist über den Proxy Server. Diese `001-reverseproxy.conf` Datei wird über den Symced Folder auf die VM hochgeladen.
+```conf
+# Allgemeine Proxy Einstellungen
+ProxyRequests Off
+<Proxy *>
+    Order deny,allow
+    Allow from all
+</Proxy>
+
+# Weiterleitungen master
+ProxyPass /master http://10.0.0.20
+ProxyPassReverse /master http://10.0.0.20
+```
+
+
+
 Zum Schluss wird dann noch der apache2 Service neugestartet.
 
 ## Webserver
