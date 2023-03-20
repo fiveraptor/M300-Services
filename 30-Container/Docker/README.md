@@ -24,7 +24,7 @@
 ## Wichtige Befehle von Docker
 
 | Befehl          | Beschreibung                                                                                               |
-|----------------|------------------------------------------------------------------------------------------------------------|
+|---------------------------------|------------------------------------------------------------------------------------------------------------|
 | `docker version`  | Zeigt die installierte Docker-Version an.                                                                |
 | `docker info`     | Gibt Informationen über das Docker-System an, z.B. Anzahl der Container und Images, Speicherplatz usw.  |
 | `docker run`      | Startet einen neuen Container aus einem Image.                                                          |
