@@ -16,7 +16,8 @@
 5. Nun kann man Docker Desktop installieren oder öffnen falls schon installiert öffnen.
 
 6. Jetzt muss Docker noch dieser `Ubuntu 22.04` zugewiesen werden. Dies kann man hier machen.
-![Docker Settings](../../Screenshots/2023-03-20%2014_14_57-Settings%20-%20Docker%20Desktop.png)
+
+    ![Docker Settings](../../Screenshots/2023-03-20%2014_14_57-Settings%20-%20Docker%20Desktop.png)
 
 **Nun ist man bereit**
 
