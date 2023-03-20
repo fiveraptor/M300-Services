@@ -39,3 +39,7 @@
 | `docker logs`     | Zeigt die Logs eines Containers an.                                                                      |
 | `docker build`    | Erstellt ein Image aus einem Dockerfile.                                                                  |
 | `docker-compose` | Ein separater Befehl, der es ermöglicht, Multi-Container-Anwendungen über eine `docker-compose.yml`-Datei zu definieren und zu verwalten. |
+
+
+## Was ist das Dockerfile
+Ein Dockerfile ist eine Textdatei, die Anweisungen enthält, um ein Docker-Image zu erstellen. Das Docker-Image enthält alle erforderlichen Abhängigkeiten, um eine Anwendung oder einen Dienst auszuführen. Das Dockerfile bietet eine Möglichkeit, Docker-Images in einer konsistenten Umgebung zu definieren und zu konfigurieren.
