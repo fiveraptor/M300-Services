@@ -37,4 +37,4 @@ Vagrant kann man [hier](https://www.vagrantup.com/downloads) downloaden und inst
     | `vagrant provision`  | Führt eine erneute Provisionierung auf der VM durch     |
 
 6. Hier ein Netzwerkplan der darstellt wie das Netzwerktechnisch mit den VMs funktioniert.
-   ![Netzwerkplan](../Screenshots/Vagrant-Virtualbox.drawio.png)
+   ![Netzwerkplan](../../Screenshots/Vagrant-Virtualbox.drawio.png)
