@@ -54,3 +54,22 @@ Es gibt 3 Arten von Docker Volumes:
 2. Host-Mounted Volumes: Host-Mounted Volumes sind Verzeichnisse auf dem Host-System, die von einem Docker-Container als Volume gemountet werden. Dadurch können Daten zwischen dem Host-System und dem Container ausgetauscht werden.
 
 3. Temporäre Volumes: Temporäre Volumes sind Volumes, die nur für die Dauer eines Container-Lebenszyklus existieren und nach dem Beenden des Containers automatisch gelöscht werden. Sie eignen sich gut für temporäre Daten, wie beispielsweise Log-Dateien oder temporäre Dateien, die während der Ausführung eines Containers generiert werden.
+
+### Hier die Grundlegenden Befehle um Volumes zu verwenden: 
+| Befehl  | Beschreibung |
+| ------- | ------------ |
+| `docker volume create <volume-name>` | Erstellt ein neues benanntes Volume mit dem angegebenen Namen |
+| `docker volume ls` | Zeigt eine Liste aller vorhandenen Docker Volumes an |
+| `docker volume inspect <volume-name>` | Zeigt Informationen über das angegebene Docker Volume an |
+| `docker volume rm <volume-name>` | Entfernt das angegebene Docker Volume |
+| `docker run -v <volume-name>:<container-mount-point>` | Erstellt einen neuen Container und bindet das angegebene Volume an das angegebene Verzeichnis im Container |
+| `docker run -v <host-path>:<container-mount-point>` | Erstellt einen neuen Container und bindet das angegebene Host-Verzeichnis an das angegebene Verzeichnis im Container |
+| `docker run --rm -v <volume-name>:<container-mount-point>` | Erstellt einen temporären Container mit dem angegebenen Volume und löscht den Container automatisch nach dem Beenden |
+| `docker run --mount type=bind,source=<host-path>,target=<container-mount-point>` | Erstellt einen neuen Container und bindet das angegebene Host-Verzeichnis an das angegebene Verzeichnis im Container (Alternative zur "-v" Option) |
+| `docker-compose.yml` | Verwendet die Docker Compose-Konfigurationsdatei, um Docker Volumes, Container und Netzwerke zu erstellen und zu konfigurieren. |
+
+
+## Netzwerk Anbindung
+Um eine Verbindung zu einem Docker-Container herzustellen, der eine bestimmte Anwendung ausführt, die auf einen bestimmten Port läuft, muss dieser Port an den Host oder das Netzwerk weitergeleitet werden. Dazu muss man im Dockerfile die Ports, die die Anwendung benutzt, über die Anweisung "EXPOSE" eintragen. Dies macht es möglich, dass andere Container oder Anwendungen auf den Container und somit auf die Anwendung zugreifen kann.
+
+Beim starten eines Containers muss jedoch auch noch einen Parameter ```-p``` und den Ports mitgegeben werden. Hier ein Beispiel: ```docker run -p 8080:80 web```
