@@ -24,7 +24,7 @@ Dieser Befehl löscht die Standard-Webseite des Apache-Webservers, die sich unte
 ```
 RUN echo '<h1>Test</h1>' > /var/www/html/index.html
 ```
-Hier wird eine einfache Test-Webseite erstellt, indem der Text "<h1>Test</h1>" in die Datei /var/www/html/index.html geschrieben wird.
+Hier wird eine einfache Test-Webseite erstellt, indem der Text "Test" in die Datei /var/www/html/index.html geschrieben wird.
 
 ```
 EXPOSE 80
