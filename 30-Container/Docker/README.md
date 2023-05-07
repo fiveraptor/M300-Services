@@ -47,6 +47,13 @@ Ein Dockerfile ist eine Textdatei, die Anweisungen enthält, um ein Docker-Image
 ## Was sind Docker Images
 Docker Images sind Dateien, die wie eine Art Template sind. Man kann sie aus einem Dockerfile erstellen lassen. Diese Docker Images werden dann verwendet um Container zu Deployen. Wenn man was an den Containern ändern will (Update), erstellt man auch wieder zuerst ein neues Docker Image. Dieses kann dann getestet werden und auch wieder deployt werden.
 
+### Namensgebung:
+Der Repository Name sollte klein geschrieben werden und kann aus mehreren Teilen bestehen, die durch Schrägstriche getrennt sind, ähnlich wie bei einer URL. Zum Beispiel könnte der Repository-Name "meinunternehmen/meineanwendung" lauten.
+
+Der Tag kann eine beliebige Zeichenfolge sein, die der Entwickler wählt, um eine bestimmte Version des Images darzustellen, wie z.B. "latest" oder "v1.0".
+
+Zusammen ergibt sich ein Docker-Image-Name wie folgt: repository-name:tag. Ein Beispiel könnte meinunternehmen/meineanwendung:v1.0 sein.
+
 ## Was sind Docker Volumes
 Es gibt 3 Arten von Docker Volumes:
 1. Named Volumes: Benannte Volumes sind ein benannter Speicherbereich, der von einem Docker-Container genutzt wird. Sie werden durch einen eindeutigen Namen identifiziert und sind portierbar, was bedeutet, dass sie einfach von einem Host-System auf ein anderes kopiert werden können.
