@@ -43,3 +43,14 @@
 
 ## Was ist das Dockerfile
 Ein Dockerfile ist eine Textdatei, die Anweisungen enthält, um ein Docker-Image zu erstellen. Das Docker-Image enthält alle erforderlichen Abhängigkeiten, um eine Anwendung oder einen Dienst auszuführen. Das Dockerfile bietet eine Möglichkeit, Docker-Images in einer konsistenten Umgebung zu definieren und zu konfigurieren.
+
+## Was sind Docker Images
+Docker Images sind Dateien, die wie eine Art Template sind. Man kann sie aus einem Dockerfile erstellen lassen. Diese Docker Images werden dann verwendet um Container zu Deployen. Wenn man was an den Containern ändern will (Update), erstellt man auch wieder zuerst ein neues Docker Image. Dieses kann dann getestet werden und auch wieder deployt werden.
+
+## Was sind Docker Volumes
+Es gibt 3 Arten von Docker Volumes:
+1. Named Volumes: Benannte Volumes sind ein benannter Speicherbereich, der von einem Docker-Container genutzt wird. Sie werden durch einen eindeutigen Namen identifiziert und sind portierbar, was bedeutet, dass sie einfach von einem Host-System auf ein anderes kopiert werden können.
+
+2. Host-Mounted Volumes: Host-Mounted Volumes sind Verzeichnisse auf dem Host-System, die von einem Docker-Container als Volume gemountet werden. Dadurch können Daten zwischen dem Host-System und dem Container ausgetauscht werden.
+
+3. Temporäre Volumes: Temporäre Volumes sind Volumes, die nur für die Dauer eines Container-Lebenszyklus existieren und nach dem Beenden des Containers automatisch gelöscht werden. Sie eignen sich gut für temporäre Daten, wie beispielsweise Log-Dateien oder temporäre Dateien, die während der Ausführung eines Containers generiert werden.
