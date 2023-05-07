@@ -1,4 +1,4 @@
-Das Dockerfile enthält die folgenden Schritte:
+# Beispiel für ein Docker Image
 
 ```
 FROM ubuntu:20.04
