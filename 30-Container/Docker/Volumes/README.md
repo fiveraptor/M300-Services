@@ -1,0 +1,3 @@
+# Volume Datenablage
+
+Die beiden Docker Container verfügen über die gleiche Datenablage (Volume). Wenn der erste Container gestartet wird, wird ein Named Volume für MySQL-Daten erstellt und dem Container zugewiesen. Die Daten im Verzeichnis ```/var/lib/mysql``` werden innerhalb des Containers in diesem Volume gespeichert. Der zweite Container verwendet ein anderes Dockerfile und erstellt ein Volume namens ```/test-volume```. Wenn dieser Container gestartet wird, wird auch ein Volume mit diesem Namen erstellt und dem Container zugewiesen. Wenn beide Container nun gestartet werden und ihnen dasselbe Volume zugewiesen wird, können sie auf dieselben Daten zugreifen und miteinander kommunizieren, wenn eine entsprechende Anwendung implementiert wird.
