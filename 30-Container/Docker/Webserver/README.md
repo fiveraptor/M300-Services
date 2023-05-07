@@ -17,5 +17,3 @@ Aucgh wird der Port 80 auf Port 443 weitergeleitet. Die Umleitung erfolgt in ein
    Redirect permanent / https://localhost/
 </VirtualHost>
 ```
-
-Diese Umleitung sorgt dafür, dass alle eingehenden Anfragen auf Port 80 an Port 443 weitergeleitet werden, wo der HTTPS-Verkehr verschlüsselt wird. Auf diese Weise wird sichergestellt, dass der gesamte Datenverkehr über eine sichere Verbindung übertragen wird.
