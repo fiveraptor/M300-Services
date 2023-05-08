@@ -1,21 +1,81 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webserver-deployment
-  labels:
-    app: webserver
+  name: master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: master
+  template:
+    metadata:
+      labels:
+        app: master
+    spec:
+      containers:
+      - name: master
+        image: nginx:latest
+        resources:
+          limits:
+            cpu: "2"
+            memory: "5120Mi"
+          requests:
+            cpu: "2"
+            memory: "5120Mi"
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: webserver
+      app: worker
   template:
     metadata:
       labels:
-        app: webserver
+        app: worker
     spec:
       containers:
-      - name: webserver-container
+      - name: worker
         image: nginx:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "2048Mi"
+          requests:
+            cpu: "1"
+            memory: "2048Mi"
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: master-service
+spec:
+  clusterIP: 10.96.10.100
+  selector:
+    app: master
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: worker-service
+spec:
+  clusterIP: 10.96.10.101
+  selector:
+    app: worker
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
